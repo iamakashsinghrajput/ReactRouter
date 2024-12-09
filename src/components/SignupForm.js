@@ -119,14 +119,14 @@ const SignupForm = ({setIsLoggedIn}) => {
                             type={showpassword ? ("text") : ("password")}
                             name = 'password'
                             onChange={changeHandler}
-                            placeholder='Enter your password'
+                            placeholder='Password'
                             value={formData.password}
                             className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
                         />
                         <span className='absolute right-3 top-[38px] cursor-pointer'
                         onClick={() => setshowpassword((prev) => !prev)}>
-                            {showpassword ? (<FaRegEye fontSize={24} fill='#AFB2BF'/>) : 
-                            (<FaRegEyeSlash fontSize={24} fill='#AFB2BF'/>) }
+                            {showpassword ? (<FaRegEye fontSize={22} fill='#AFB2BF'/>) : 
+                            (<FaRegEyeSlash fontSize={22} fill='#AFB2BF'/>) }
                         </span>
                     </label>
 
@@ -137,13 +137,14 @@ const SignupForm = ({setIsLoggedIn}) => {
                             type={showConfirmPassword ? ("text"):("password")}
                             name = 'confirmpassword'
                             onChange={changeHandler}
-                            placeholder='Enter confirm password'
+                            placeholder='Confirm password'
                             value={formData.confirmpassword}
                             className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
                         />
                         <span className='absolute right-3 top-[38px] cursor-pointer'
                         onClick={() => setShowConfirmPassword((prev) => !prev)}>
-                            {showConfirmPassword ? (<FaRegEye/>) : (<FaRegEyeSlash/>) }
+                            {showConfirmPassword ? (<FaRegEye fontSize={22} fill='#AFB2BF'/>) :
+                             (<FaRegEyeSlash fontSize={22} fill='#AFB2BF'/>) }
                         </span>
                     </label>
                 </div>

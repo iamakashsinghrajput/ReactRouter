@@ -64,7 +64,8 @@ const LoginForm = ({setIsLoggedIn}) => {
                 />
                 <span className='absolute right-3 top-[38px] cursor-pointer'
                 onClick={() => setshowpassword((prev) => !prev)}>
-                    {showpassword ? (<FaRegEye/>) : (<FaRegEyeSlash/>) }
+                    {showpassword ? (<FaRegEye fontSize={22} fill='#AFB2BF'/>) : 
+                    (<FaRegEyeSlash fontSize={22} fill='#AFB2BF'/>) }
                 </span>
 
                 <Link to = "#">
@@ -72,7 +73,9 @@ const LoginForm = ({setIsLoggedIn}) => {
                 </Link>
             </label>
 
-            <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-6'>Sign In</button>
+            <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-6'>
+                Sign In
+            </button>
         </form>
      )
 }
