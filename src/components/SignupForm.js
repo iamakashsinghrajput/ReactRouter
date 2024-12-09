@@ -7,8 +7,8 @@ const SignupForm = ({setIsLoggedIn}) => {
     const navigate= useNavigate();
 
     const [formData, setFormData] = useState({
-        firstName : "",
-        lastName : "",
+        firstname : "",
+        lastname : "",
         email : "",
         password: "",
         confirmpassword: ""
@@ -38,6 +38,10 @@ const SignupForm = ({setIsLoggedIn}) => {
         const accountData= {
             ...formData
         };
+        const finalData = {
+            ...accountData,
+            accountType
+        }
         console.log("Printing Account Data", accountData);
         navigate("/dashboard");
     }
@@ -72,7 +76,7 @@ const SignupForm = ({setIsLoggedIn}) => {
                             name='firstname'
                             onChange={changeHandler}
                             placeholder='Enter your first name'
-                            value={formData.firstName}
+                            value={formData.firstname}
                             className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
                         />
                     </label>
@@ -82,10 +86,10 @@ const SignupForm = ({setIsLoggedIn}) => {
                         <input
                             required
                             type='text'
-                            name = 'lastname'
+                            name='lastname'
                             onChange={changeHandler}
                             placeholder='Enter your last name'
-                            value={formData.lastName}
+                            value={formData.lastname}
                             className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
                         />
                     </label>
@@ -121,7 +125,8 @@ const SignupForm = ({setIsLoggedIn}) => {
                         />
                         <span className='absolute right-3 top-[38px] cursor-pointer'
                         onClick={() => setshowpassword((prev) => !prev)}>
-                            {showpassword ? (<FaRegEye/>) : (<FaRegEyeSlash/>) }
+                            {showpassword ? (<FaRegEye fontSize={24} fill='#AFB2BF'/>) : 
+                            (<FaRegEyeSlash fontSize={24} fill='#AFB2BF'/>) }
                         </span>
                     </label>
 
